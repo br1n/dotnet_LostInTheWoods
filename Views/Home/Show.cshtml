@@ -1,0 +1,30 @@
+@model Trail
+@{
+    ViewData["Title"] = @Model.Name ;
+}
+<body>
+    <h1>@Model.Name</h1>
+    <hr>
+    <h4>Hiker Description:</h4>
+    <p>"@Model.Description"</p>
+    <hr>
+    <h4>Hike Length:</h4>
+    <p>@Model.Length Miles</p>
+    <hr>
+    <h4>Elevation Gain:</h4>
+    <p>@Model.Elevation ft.</p>
+    <hr>
+    <h4>Latitude:</h4>
+    <p>@Model.Latitude </p>
+    <hr>
+    <h4>Longitude:</h4>
+    <p>@Model.Longitude</p>
+    <hr>
+    <!-- added readable DateTime  -->
+    <h4>Created On:</h4>
+    <p>@Model.CreatedAt.ToString("D")</p>
+
+    <form action="/" method="get">
+        <button type="submit">Go Home</button>
+    </form>
+</body>

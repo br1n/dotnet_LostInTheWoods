@@ -1,0 +1,45 @@
+@model Trail
+@{
+    ViewData["Title"] = "Add Trail";
+}
+<body>
+    <h1>Add A New Trail!</h1>
+    <hr>
+    <form asp-action="Create" asp-controller="Home" method="post">
+        <div class="form-group">
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name">Hike Name: </label>
+            <input type="text" asp-for="Name">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Description"></span>
+            <label asp-for="Description">Description:</label>
+            <input type="text" asp-for="Description">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Length"></span>
+            <label asp-for="Length">Hike Length (in miles):</label>
+            <input type="text" asp-for="Length">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Elevation"></span>
+            <label asp-for="Elevation"> Elevation Gain: </label>
+            <input type="text" asp-for="Elevation">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Longitude"></span>
+            <label asp-for="Longitude"></label>
+            <input type="text" asp-for="Longitude">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Latitude"></span>
+            <label asp-for="Latitude"></label>
+            <input type="text" asp-for="Latitude">
+        </div>
+        <button type="submit">Create Record!</button>
+    </form>
+        <form action="/" method="get">
+            <button type="submit">Go Home</button>
+        </form>
+</body>
+</html>
